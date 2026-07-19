@@ -1,3 +1,5 @@
-# fast ride s.r.o.
+# fast ride s.r.o. — web
 
-Web připravený pro GitHub Pages. Nahrajte celý obsah do veřejného repozitáře a v Settings → Pages zvolte Deploy from a branch, main, /(root).
+Finální kompaktní verze pro GitHub Pages.
+
+Nahrajte obsah této složky do kořene repozitáře `fastride`.
