@@ -72,9 +72,9 @@ h3{line-height:1.2;margin-bottom:8px}
 .page-hero p{color:#c5cbd0;max-width:770px;margin:0;font-size:1.04rem}
 .compact-hero{padding-bottom:34px}
 .split{display:grid;grid-template-columns:1fr 1fr;gap:34px;align-items:center}
-
-
-
+.image-panel{min-height:390px;border-radius:22px;box-shadow:var(--shadow);background-position:center;background-size:cover}
+.image-panel.electrical{background-image:url("../assets/electro-panel.webp")}
+.image-panel.construction{background-image:url("../assets/construction.webp")}
 .check-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:8px 16px;margin-top:20px}
 .check-grid span{color:var(--muted);font-size:.9rem}.check-grid span:before{content:"✓";color:#9b6200;font-weight:900;margin-right:8px}
 .one-column{grid-template-columns:1fr}
@@ -127,7 +127,7 @@ h3{line-height:1.2;margin-bottom:8px}
  .section-heading{align-items:flex-start;flex-direction:column;gap:8px}
  .process-grid{grid-template-columns:repeat(2,1fr)}
  .contact-band-grid,.split,.awards-grid,.contact-hero-grid,.contact-layout{grid-template-columns:1fr}
- .reverse-mobile 
+ .reverse-mobile .image-panel{order:-1}
  .footer-grid{grid-template-columns:1fr 1fr}.footer-brand{grid-column:1/-1}
  .contact-primary{margin-top:8px}.project-card p{min-height:auto}
 }
@@ -138,7 +138,7 @@ h3{line-height:1.2;margin-bottom:8px}
  .hero-facts div{border-right:0!important;border-bottom:1px solid rgba(255,255,255,.12)}
  .hero-facts div:last-child{border-bottom:0}
  .section.compact{padding:38px 0}.page-hero{padding:38px 0 32px}
- 
+ .image-panel{min-height:280px}
  .footer-grid{grid-template-columns:1fr;gap:13px}.footer-brand{grid-column:auto}.footer-links{grid-template-columns:repeat(4,auto);gap:10px;font-size:.75rem}
  .contact-phone-big{font-size:1.55rem}
 }
@@ -435,39 +435,188 @@ h3{line-height:1.2;margin-bottom:8px}
 
 
 
-/* Final correction: smaller equal images, full tools and equipment visible */
+
+/* Final photo scale: larger, balanced with the adjacent text */
 .split{
+  grid-template-columns:minmax(390px, .95fr) minmax(0, 1.05fr);
+  gap:30px;
   align-items:center;
 }
-.image-frame{
-  width:min(100%, 430px);
-  height:430px;
+.about-photo{
+  margin:0;
   justify-self:center;
-  display:flex;
-  align-items:center;
-  justify-content:center;
+  align-self:center;
   background:#fff;
-  border-radius:18px;
+  border-radius:16px;
   box-shadow:var(--shadow);
   overflow:hidden;
-  padding:10px;
 }
-.image-frame img{
-  width:100%;
-  height:100%;
-  object-fit:contain;
-  object-position:center;
+.about-photo img{
   display:block;
+  width:100%;
+  height:auto;
+  object-fit:contain;
 }
-@media(max-width:900px){
-  .image-frame{
-    width:min(100%, 400px);
-    height:400px;
+.about-photo-electrician{
+  width:min(100%, 455px);
+}
+.about-photo-finishing{
+  width:min(100%, 480px);
+}
+@media(max-width:1000px){
+  .split{
+    grid-template-columns:minmax(330px, .9fr) minmax(0, 1.1fr);
+    gap:24px;
+  }
+  .about-photo-electrician{
+    width:min(100%, 410px);
+  }
+  .about-photo-finishing{
+    width:min(100%, 430px);
+  }
+}
+@media(max-width:780px){
+  .split{
+    grid-template-columns:1fr;
+  }
+  .about-photo,
+  .about-photo-electrician,
+  .about-photo-finishing{
+    width:min(100%, 420px);
   }
 }
 @media(max-width:520px){
-  .image-frame{
+  .about-photo,
+  .about-photo-electrician,
+  .about-photo-finishing{
     width:100%;
-    height:340px;
+  }
+}
+
+/* Exact equal dimensions for the two approved photographs */
+.about-photo-electrician,
+.about-photo-finishing{
+  width:min(100%, 480px) !important;
+}
+.about-photo-electrician img,
+.about-photo-finishing img{
+  width:100%;
+  height:auto;
+  aspect-ratio:1170 / 1167;
+  object-fit:cover;
+}
+
+/* FINAL: two separate photographs with exactly equal displayed dimensions */
+.about-photo-electrician,
+.about-photo-finishing{
+  width:min(100%, 480px) !important;
+  aspect-ratio:768 / 1023;
+  margin:0;
+  align-self:center;
+  justify-self:center;
+  overflow:hidden;
+  background:#fff;
+  border-radius:16px;
+  box-shadow:var(--shadow);
+}
+.about-photo-electrician img,
+.about-photo-finishing img{
+  display:block;
+  width:100%;
+  height:100% !important;
+  object-fit:cover;
+  object-position:center;
+}
+
+/* Balance image and copy so neither creates unnecessary blank space */
+.split{
+  grid-template-columns:minmax(390px, .98fr) minmax(0, 1.02fr);
+  gap:28px;
+  align-items:center;
+}
+.phone-button{
+  min-width:185px;
+  padding-inline:20px;
+  font-size:.92rem;
+}
+.brand small i{
+  font-style:normal;
+  white-space:nowrap;
+  margin-left:7px;
+}
+@media(max-width:1000px){
+  .about-photo-electrician,
+  .about-photo-finishing{
+    width:min(100%, 430px) !important;
+  }
+  .split{
+    grid-template-columns:minmax(330px,.95fr) minmax(0,1.05fr);
+    gap:24px;
+  }
+}
+@media(max-width:780px){
+  .split{
+    grid-template-columns:1fr;
+  }
+  .about-photo-electrician,
+  .about-photo-finishing{
+    width:min(100%, 420px) !important;
+  }
+}
+@media(max-width:520px){
+  .about-photo-electrician,
+  .about-photo-finishing{
+    width:100% !important;
+  }
+  .phone-button{
+    min-width:0;
+    width:100%;
+  }
+}
+
+/* FINAL REVISION: smaller equal photographs and compact balanced layout */
+.about-photo-electrician,
+.about-photo-finishing{
+  width:min(100%, 390px) !important;
+  aspect-ratio:768 / 1023;
+}
+.about-photo-electrician img,
+.about-photo-finishing img{
+  width:100%;
+  height:100% !important;
+  object-fit:cover;
+  object-position:center;
+}
+.split{
+  grid-template-columns:minmax(330px, .9fr) minmax(0, 1.1fr);
+  gap:24px;
+  align-items:center;
+}
+.brand small{
+  white-space:nowrap;
+}
+@media(max-width:1000px){
+  .about-photo-electrician,
+  .about-photo-finishing{
+    width:min(100%, 360px) !important;
+  }
+  .split{
+    grid-template-columns:minmax(300px,.9fr) minmax(0,1.1fr);
+    gap:22px;
+  }
+}
+@media(max-width:780px){
+  .split{
+    grid-template-columns:1fr;
+  }
+  .about-photo-electrician,
+  .about-photo-finishing{
+    width:min(100%, 360px) !important;
+  }
+}
+@media(max-width:520px){
+  .about-photo-electrician,
+  .about-photo-finishing{
+    width:100% !important;
   }
 }
