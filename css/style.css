@@ -35,7 +35,7 @@ h1{font-size:clamp(2.45rem,5.1vw,5rem);line-height:1.03;letter-spacing:-.045em;m
 h2{font-size:clamp(1.8rem,3vw,3rem);line-height:1.08;letter-spacing:-.035em;margin-bottom:13px}
 h3{line-height:1.2;margin-bottom:8px}
 .hero{position:relative;color:#fff;overflow:hidden;background:var(--dark2)}
-.hero:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(8,10,12,.88) 0%,rgba(8,10,12,.63) 48%,rgba(8,10,12,.08) 100%),url("../assets/electro-panel.webp") 72% center/cover no-repeat}
+.hero:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(8,10,12,.78) 0%,rgba(8,10,12,.47) 45%,rgba(8,10,12,.03) 100%),url("../assets/hero-electrical.webp") 78% center/auto 92% no-repeat;background-color:#11161a}
 .hero-content{position:relative;z-index:1;min-height:calc(100svh - 76px);max-height:760px;padding:42px 0 28px;display:flex;flex-direction:column;justify-content:center}
 .hero-content>div:first-child{max-width:825px}
 .hero-lead{font-size:clamp(1rem,1.55vw,1.18rem);color:#d9dde1;max-width:790px;margin-bottom:8px}
@@ -272,5 +272,68 @@ h3{line-height:1.2;margin-bottom:8px}
   }
   .company-data-section{
     padding:24px 0;
+  }
+}
+
+
+/* Correction 3 */
+.hero-new{
+  font-size:clamp(1rem,1.55vw,1.18rem);
+  color:#d9dde1;
+  max-width:790px;
+  margin:0 0 8px;
+}
+.hero-new strong{
+  color:#fff;
+  font-weight:900;
+}
+.hero-company-link{
+  display:inline-block;
+  color:#fff;
+  font-weight:900;
+  text-decoration:underline;
+  text-underline-offset:5px;
+  margin:0 0 18px;
+}
+.hero-company-link:hover{
+  color:var(--accent2);
+}
+.hero-actions{
+  margin-top:0;
+}
+.hero-facts{
+  margin-top:24px;
+}
+.plain-info-block{
+  max-width:920px;
+}
+.plain-info-block h2{
+  margin-bottom:14px;
+}
+.plain-info-block p{
+  margin:0 0 7px;
+  color:var(--muted);
+}
+.region-plain{
+  margin-top:26px;
+  padding-top:22px;
+  border-top:1px solid var(--line);
+}
+.awards-section{
+  padding-bottom:34px!important;
+}
+.prep-email-button{
+  justify-self:center!important;
+  margin-right:42px;
+}
+@media(max-width:900px){
+  .prep-email-button{
+    justify-self:start!important;
+    margin-right:0;
+  }
+}
+@media(max-width:780px){
+  .hero:before{
+    background:linear-gradient(90deg,rgba(8,10,12,.76),rgba(8,10,12,.32)),url("../assets/hero-electrical.webp") 70% center/cover no-repeat;
   }
 }
