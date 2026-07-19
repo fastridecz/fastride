@@ -73,8 +73,8 @@ h3{line-height:1.2;margin-bottom:8px}
 .compact-hero{padding-bottom:34px}
 .split{display:grid;grid-template-columns:1fr 1fr;gap:34px;align-items:center}
 .image-panel{min-height:390px;border-radius:22px;box-shadow:var(--shadow);background-position:center;background-size:cover}
-.image-panel.electrical{background-image:url("../assets/electro-panel.webp")}
-.image-panel.construction{background-image:url("../assets/construction.webp")}
+.image-panel.electrical{background-image:url("../assets/about-electrician.webp");background-position:center center}
+.image-panel.construction{background-image:url("../assets/about-finishing.webp");background-position:center center}
 .check-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:8px 16px;margin-top:20px}
 .check-grid span{color:var(--muted);font-size:.9rem}.check-grid span:before{content:"✓";color:#9b6200;font-weight:900;margin-right:8px}
 .one-column{grid-template-columns:1fr}
@@ -386,4 +386,58 @@ h3{line-height:1.2;margin-bottom:8px}
       linear-gradient(90deg,rgba(8,10,12,.76),rgba(8,10,12,.27)),
       url("../assets/electro-panel.webp") 67% center / cover no-repeat;
   }
+}
+
+
+/* Correction 5: refined hero composition */
+.hero{
+  background:#0e1114;
+}
+.hero:before{
+  background:
+    linear-gradient(90deg,
+      #0e1114 0%,
+      #0e1114 49%,
+      rgba(14,17,20,.96) 54%,
+      rgba(14,17,20,.55) 63%,
+      rgba(14,17,20,.08) 76%,
+      rgba(14,17,20,0) 100%
+    ),
+    url("../assets/electro-panel.webp") right center / 58% auto no-repeat;
+  background-color:#0e1114;
+}
+.hero-content>div:first-child{
+  max-width:760px;
+}
+@media(max-width:1000px){
+  .hero:before{
+    background:
+      linear-gradient(90deg,
+        #0e1114 0%,
+        #0e1114 44%,
+        rgba(14,17,20,.88) 55%,
+        rgba(14,17,20,.15) 100%
+      ),
+      url("../assets/electro-panel.webp") right center / 64% auto no-repeat;
+  }
+}
+@media(max-width:780px){
+  .hero:before{
+    background:
+      linear-gradient(180deg,
+        rgba(14,17,20,.88) 0%,
+        rgba(14,17,20,.70) 48%,
+        rgba(14,17,20,.38) 100%
+      ),
+      url("../assets/electro-panel.webp") 68% center / cover no-repeat;
+  }
+}
+
+/* Final approved O společnosti photographs */
+.image-panel.electrical,
+.image-panel.construction{
+  aspect-ratio:3/4;
+  min-height:0;
+  background-size:cover;
+  background-repeat:no-repeat;
 }
