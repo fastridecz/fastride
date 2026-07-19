@@ -19,7 +19,7 @@ button{font:inherit}
 .brand b{display:block;font-size:.96rem}.brand small{display:block;color:var(--muted);font-size:.68rem;text-transform:uppercase;letter-spacing:.08em;font-weight:700}
 .header-phone{display:none}
 .main-nav{display:flex;align-items:center;gap:16px;font-weight:750;font-size:.88rem;margin-left:auto}
-.main-nav:before{content:"+420 605 871 013";font-size:.76rem;color:var(--muted);font-weight:800;white-space:nowrap;margin-right:-5px}
+.main-nav:before{display:none}
 .main-nav>a:not(.button){padding:9px 0;border-bottom:2px solid transparent}.main-nav>a:hover{border-color:var(--accent)}
 .menu-button{display:none;background:#fff;border:1px solid var(--line);border-radius:10px;padding:9px 12px;font-weight:800}
 .button{display:inline-flex;align-items:center;justify-content:center;min-height:46px;padding:0 18px;border-radius:11px;font-weight:850;border:1px solid transparent;white-space:nowrap;transition:.2s}
@@ -335,5 +335,55 @@ h3{line-height:1.2;margin-bottom:8px}
 @media(max-width:780px){
   .hero:before{
     background:linear-gradient(90deg,rgba(8,10,12,.76),rgba(8,10,12,.32)),url("../assets/hero-electrical.webp") 70% center/cover no-repeat;
+  }
+}
+
+
+/* Correction 4 */
+.brand small{
+  white-space:nowrap;
+}
+.brand small i{
+  font-style:normal;
+  color:#25292d;
+  font-weight:850;
+  letter-spacing:.02em;
+  margin-left:4px;
+}
+
+/* Restore the original electrical-panel photograph, keep it bright and avoid excessive enlargement. */
+.hero:before{
+  background:
+    linear-gradient(90deg,rgba(8,10,12,.74) 0%,rgba(8,10,12,.40) 46%,rgba(8,10,12,.02) 100%),
+    url("../assets/electro-panel.webp") 74% center / auto 90% no-repeat;
+  background-color:#11161a;
+}
+.hero-company-link{
+  margin-bottom:18px;
+}
+.contact-primary-final{
+  padding-bottom:0;
+}
+.contact-meta{
+  margin-top:12px;
+}
+.contact-hero{
+  padding-bottom:34px;
+}
+@media(max-width:1040px){
+  .brand small i{
+    display:block;
+    margin-left:0;
+    margin-top:2px;
+  }
+}
+@media(max-width:780px){
+  .brand small{
+    display:none;
+  }
+  .hero:before{
+    background:
+      linear-gradient(90deg,rgba(8,10,12,.76),rgba(8,10,12,.27)),
+      url("../assets/electro-panel.webp") 67% center / cover no-repeat;
   }
 }
