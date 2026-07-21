@@ -729,3 +729,44 @@ main,section,.container{min-width:0}
   .hero-actions .button{width:100%}
   .card{padding:18px}
 }
+
+
+/* FINAL APPROVED NOVINKA + transparent unchanged logo */
+.brand img{width:66px;height:66px;object-fit:contain;background:transparent}
+.footer-brand img{width:64px;height:64px;object-fit:contain;background:transparent}
+
+.hero-new{display:block;color:#eef0f2;margin:0 0 19px}
+.hero-new .novinka-square{margin-right:.48em}
+.hero-new strong{color:var(--accent2);margin-right:.25em}
+.novinka-square{display:inline-block;width:.68em;height:.68em;border-radius:2px;background:var(--accent);vertical-align:.06em;flex:0 0 auto}
+
+.construction-news{padding:44px 0;background:#f4f5f6}
+.construction-news-heading{max-width:830px;margin:0 auto 24px;text-align:center}
+.construction-news-heading>.eyebrow{color:var(--accent2);margin-bottom:12px}
+.construction-news-heading>.eyebrow:before{background:var(--accent)}
+.construction-news-badge{display:inline-flex;align-items:center;gap:10px;margin:0 auto 14px;padding:10px 17px;border:2px solid var(--accent);border-radius:9px;background:#fff;color:var(--accent2);font-size:clamp(1.08rem,2vw,1.42rem);line-height:1;font-weight:900;letter-spacing:.07em;box-shadow:0 6px 18px rgba(0,0,0,.06)}
+.construction-news-badge .novinka-square{width:.72em;height:.72em}
+.construction-news-heading h2{margin:0 0 9px}
+.construction-news-heading p{max-width:700px;margin:0 auto;color:var(--muted)}
+.construction-icon-row{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;max-width:980px;margin:0 auto;padding:18px 20px;border:1px solid rgba(242,163,26,.55);border-radius:16px;background:#fff;box-shadow:0 10px 28px rgba(0,0,0,.045)}
+.construction-icon-row article{min-width:0;text-align:center;padding:4px 8px}
+.construction-mini-icon{width:48px;height:48px;margin:0 auto 8px;color:var(--accent2)}
+.construction-mini-icon svg{display:block;width:100%;height:100%;fill:none;stroke:currentColor;stroke-width:3;stroke-linecap:round;stroke-linejoin:round}
+.construction-icon-row h3{font-size:.96rem;margin:0 0 5px}
+.construction-icon-row p{font-size:.78rem;line-height:1.42;color:var(--muted);margin:0}
+
+@media(max-width:900px){
+  .construction-icon-row{grid-template-columns:repeat(2,minmax(0,1fr));gap:16px 10px}
+}
+@media(max-width:760px){
+  .brand img{width:58px;height:58px}
+  .construction-news{padding:34px 0}
+  .construction-icon-row{padding:16px 12px}
+}
+@media(max-width:440px){
+  .construction-icon-row{grid-template-columns:1fr 1fr;gap:14px 6px}
+  .construction-mini-icon{width:42px;height:42px}
+  .construction-icon-row article{padding:2px 4px}
+  .construction-icon-row h3{font-size:.88rem}
+  .construction-icon-row p{font-size:.73rem}
+}
