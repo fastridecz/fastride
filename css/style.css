@@ -620,3 +620,112 @@ h3{line-height:1.2;margin-bottom:8px}
     width:100% !important;
   }
 }
+
+
+/* SEO launch update: construction-services highlight */
+.construction-news{
+  padding:44px 0;
+  background:#eef0f2;
+}
+.construction-news-panel{
+  display:grid;
+  grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);
+  gap:28px;
+  align-items:start;
+  padding:28px;
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:22px;
+  box-shadow:var(--shadow);
+}
+.news-badge{
+  display:inline-flex;
+  margin:0 0 14px;
+  padding:7px 11px;
+  border-radius:999px;
+  background:var(--accent);
+  color:#2b1c02;
+  font-size:.72rem;
+  line-height:1;
+  font-weight:950;
+  letter-spacing:.11em;
+}
+.construction-news-copy p{
+  margin:0;
+  color:var(--muted);
+}
+.construction-news-list{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:10px;
+}
+.construction-news-list article{
+  min-height:104px;
+  padding:16px;
+  border:1px solid var(--line);
+  border-radius:15px;
+  background:#f8f9fa;
+}
+.construction-news-list article:last-child{
+  grid-column:1 / -1;
+  min-height:auto;
+}
+.construction-news-list b,
+.construction-news-list span{
+  display:block;
+}
+.construction-news-list b{
+  margin-bottom:5px;
+  font-size:.98rem;
+}
+.construction-news-list span{
+  color:var(--muted);
+  font-size:.84rem;
+}
+
+/* Stronger responsive safeguards for varied screen widths */
+body{overflow-x:hidden}
+main,section,.container{min-width:0}
+.hero-content>div:first-child,
+.section-heading>*,
+.split>*,
+.contact-band-grid>*{min-width:0}
+
+@media(max-width:1100px){
+  .header-inner{gap:14px}
+  .brand{min-width:220px}
+  .main-nav{gap:11px;font-size:.82rem}
+  .nav-call{padding-inline:13px}
+  .service-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+
+@media(max-width:900px){
+  .construction-news-panel{grid-template-columns:1fr}
+  .construction-news-list{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .section-heading{align-items:start}
+}
+
+@media(max-width:720px){
+  .container{width:min(calc(100% - 28px),var(--max))}
+  .construction-news-panel{padding:20px}
+  .construction-news-list{grid-template-columns:1fr}
+  .construction-news-list article:last-child{grid-column:auto}
+  .service-grid,
+  .project-grid,
+  .process-grid,
+  .standards-grid,
+  .value-grid,
+  .award-cards{grid-template-columns:1fr}
+  .section-heading,
+  .contact-band-grid{display:grid;grid-template-columns:1fr}
+  .contact-band-grid{gap:22px}
+  .contact-phone-big{font-size:clamp(1.45rem,8vw,2.1rem)}
+}
+
+@media(max-width:420px){
+  h1{font-size:clamp(2.05rem,12vw,3rem)}
+  h2{font-size:clamp(1.55rem,8vw,2.15rem)}
+  .hero-actions{display:grid;grid-template-columns:1fr}
+  .hero-actions .button{width:100%}
+  .card{padding:18px}
+}
