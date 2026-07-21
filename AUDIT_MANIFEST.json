@@ -1,22 +1,42 @@
 {
-  "index.html": 11956,
-  "o-spolecnosti.html": 10056,
-  "realizace.html": 6186,
-  "kontakty.html": 6397,
-  "robots.txt": 65,
-  "sitemap.xml": 435,
-  ".nojekyll": 0,
-  "README.md": 139,
-  "CNAME": 13,
-  "404.html": 517,
-  "TECHNICAL_AUDIT.md": 1070,
-  "assets/logo.webp": 133114,
-  "assets/electro-panel.webp": 159088,
-  "assets/construction.webp": 88270,
-  "assets/hero-electrical.webp": 149420,
-  "assets/about-electrician.webp": 120640,
-  "assets/about-finishing.webp": 65118,
-  "assets/logo-transparent.png": 945570,
-  "css/style.css": 27213,
-  "js/main.js": 558
+  "files_checked": [
+    "index.html",
+    "o-spolecnosti.html",
+    "realizace.html",
+    "kontakty.html",
+    "404.html"
+  ],
+  "missing_files": [],
+  "h1_counts": {
+    "index.html": 1,
+    "o-spolecnosti.html": 1,
+    "realizace.html": 1,
+    "kontakty.html": 1,
+    "404.html": 1
+  },
+  "viewport_present": {
+    "index.html": true,
+    "o-spolecnosti.html": true,
+    "realizace.html": true,
+    "kontakty.html": true,
+    "404.html": true
+  },
+  "canonical_present": {
+    "index.html": true,
+    "o-spolecnosti.html": true,
+    "realizace.html": true,
+    "kontakty.html": true,
+    "404.html": true
+  },
+  "description_present": {
+    "index.html": true,
+    "o-spolecnosti.html": true,
+    "realizace.html": true,
+    "kontakty.html": true,
+    "404.html": true
+  },
+  "logo_alpha_transparent": true,
+  "robots_exists": true,
+  "sitemap_exists": true,
+  "cname": "fast-ride.cz"
 }
