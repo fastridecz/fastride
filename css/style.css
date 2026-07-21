@@ -729,3 +729,24 @@ main,section,.container{min-width:0}
   .hero-actions .button{width:100%}
   .card{padding:18px}
 }
+
+/* NOVINKA — final requested presentation */
+.hero-new{display:flex;align-items:baseline;flex-wrap:wrap;gap:0}
+.hero-new-square{display:inline-block;width:.72em;height:.72em;margin-right:.52em;border-radius:3px;background:var(--accent);box-shadow:0 0 0 1px rgba(255,255,255,.08);flex:0 0 auto}
+.hero-new strong{margin-right:.28em}
+
+.construction-news{padding:46px 0;background:#f3f4f5}
+.construction-news-heading{max-width:870px;margin:0 auto 26px;text-align:center}
+.construction-news-heading .eyebrow{margin-bottom:14px}
+.construction-news-badge{display:table;margin:0 auto 15px;padding:10px 22px;border:2px solid var(--accent);border-radius:11px;color:var(--accent);background:#fff;font-size:clamp(1.25rem,2.4vw,1.8rem);line-height:1;font-weight:950;letter-spacing:.08em;box-shadow:0 8px 24px rgba(0,0,0,.07)}
+.construction-news-heading h2{margin-bottom:10px}
+.construction-news-heading p{max-width:720px;margin:0 auto;color:var(--muted)}
+.construction-icon-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px;align-items:stretch}
+.construction-icon-card{display:flex;flex-direction:column;align-items:center;min-width:0;padding:20px 15px 18px;border:1px solid rgba(242,140,40,.55);border-radius:16px;background:#fff;text-align:center;box-shadow:0 10px 28px rgba(0,0,0,.055)}
+.construction-icon{display:grid;place-items:center;width:70px;height:70px;margin-bottom:12px;color:var(--accent)}
+.construction-icon svg{width:100%;height:100%;fill:none;stroke:currentColor;stroke-width:3;stroke-linecap:round;stroke-linejoin:round}
+.construction-icon-card h3{margin:0 0 8px;color:#171717;font-size:1.02rem}
+.construction-icon-card p{margin:0;color:var(--muted);font-size:.82rem;line-height:1.52}
+@media(max-width:1100px){.construction-icon-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:760px){.construction-news{padding:34px 0}.construction-icon-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:480px){.construction-icon-grid{grid-template-columns:1fr}.construction-icon-card{padding:18px}}
