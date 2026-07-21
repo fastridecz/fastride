@@ -5,7 +5,10 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#1c2024">
-<link rel="icon" href="assets/logo.webp">
+<meta name="color-scheme" content="light">
+<meta name="application-name" content="fast ride s.r.o.">
+<link rel="icon" type="image/png" href="assets/logo-transparent.png">
+<link rel="apple-touch-icon" href="assets/logo-transparent.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -17,6 +20,7 @@
 <meta property="og:description" content="30 let zkušeností. Elektroinstalace, rekonstrukce bytů a domů, fasádnické, zednické a montážní práce po celé ČR.">
 <meta property="og:image" content="https://fast-ride.cz/assets/hero-electrical.webp">
 <meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
 <script type="application/ld+json">
 {
   "@context":"https://schema.org",
@@ -69,7 +73,7 @@
 <header class="site-header">
   <div class="container header-inner">
     <a class="brand" href="index.html" aria-label="fast ride s.r.o. – domů">
-      <img src="assets/logo.webp" alt="Logo fast ride s.r.o.">
+      <img src="assets/logo-transparent.png" alt="Logo fast ride s.r.o." width="64" height="64" decoding="async">
       <span><b>fast ride s.r.o.</b><small>Elektroinstalace a technická řešení</small></span>
     </a>
     <a class="header-phone" href="tel:+420605871013" aria-label="Zavolat na číslo +420 605 871 013">
@@ -93,7 +97,7 @@
       <span class="eyebrow">Elektroinstalace bez kompromisů</span>
       <h1>Profesionální elektroinstalace po celé České republice</h1>
       <p class="hero-lead"><strong>30 let zkušeností.</strong> Komplexní elektroinstalace, rozvaděče, chytrá domácnost, datové sítě a technický servis pro domácnosti, firmy i komerční objekty.</p>
-      <p class="hero-new"><strong>Novinka.</strong> Rozšiřujeme služby o rekonstrukce, fasádnické, zednické a montážní práce.</p>
+      <p class="hero-new"><span class="novinka-square" aria-hidden="true"></span><strong>NOVINKA.</strong> Rozšiřujeme služby o rekonstrukce, fasádnické, zednické a montážní práce.</p>
       <a class="hero-company-link" href="o-spolecnosti.html">Více o společnosti →</a>
       <div class="hero-actions">
         <a class="button button-accent" href="kontakty.html">Nezávazná konzultace</a>
@@ -132,20 +136,17 @@
 
 <section class="section construction-news" aria-labelledby="construction-news-title">
   <div class="container">
-    <div class="construction-news-panel">
-      <div class="construction-news-copy">
-        <span class="news-badge">NOVINKA</span>
-        <span class="eyebrow dark">Stavební práce</span>
-        <h2 id="construction-news-title">Rekonstrukce a dokončovací práce jako součást jedné zakázky</h2>
-        <p>Elektroinstalaci dokážeme propojit s navazujícími stavebními pracemi, takže zákazník nemusí samostatně hledat několik různých dodavatelů.</p>
-      </div>
-      <div class="construction-news-list">
-        <article><b>Fasádnické práce</b><span>Opravy, úpravy a dokončování fasád.</span></article>
-        <article><b>Rekonstrukce bytů</b><span>Koordinace elektroinstalace a navazujících profesí.</span></article>
-        <article><b>Rekonstrukce domů</b><span>Postupná i komplexní modernizace objektů.</span></article>
-        <article><b>Rekonstrukce podlah</b><span>Příprava podkladu, opravy a dokončovací práce.</span></article>
-        <article><b>Zkušená realizační parta</b><span>Zedníci a montážní pracovníci pro koordinovaný průběh zakázky.</span></article>
-      </div>
+    <div class="construction-news-heading">
+      <span class="eyebrow">Stavební práce</span>
+      <span class="construction-news-badge"><span class="novinka-square" aria-hidden="true"></span>NOVINKA</span>
+      <h2 id="construction-news-title">Rekonstrukce a dokončovací práce jako součást jedné zakázky</h2>
+      <p>Elektroinstalaci propojujeme s navazujícími stavebními pracemi, aby zákazník mohl řešit zakázku s jedním spolehlivým partnerem.</p>
+    </div>
+    <div class="construction-icon-row" aria-label="Nové stavební služby">
+      <article><div class="construction-mini-icon"><svg viewBox="0 0 64 64" aria-hidden="true"><path d="M12 55h40M17 55V17h30v38"/><path d="M23 24h7v8h-7zM35 24h7v8h-7zM23 38h7v8h-7zM35 38h7v8h-7z"/><path d="m47 13 7-7M50 18l8-8"/></svg></div><h3>Fasádnické práce</h3><p>Opravy, úpravy a dokončení fasád.</p></article>
+      <article><div class="construction-mini-icon"><svg viewBox="0 0 64 64" aria-hidden="true"><path d="M8 31 32 10l24 21"/><path d="M14 28v28h36V28"/><path d="M26 56V40h12v16"/></svg></div><h3>Rekonstrukce domů</h3><p>Postupná i celková modernizace domů.</p></article>
+      <article><div class="construction-mini-icon"><svg viewBox="0 0 64 64" aria-hidden="true"><path d="M12 56V18l20-10 20 10v38"/><path d="M22 56V30h20v26M17 22h30"/><path d="M27 36h10M27 43h10"/></svg></div><h3>Rekonstrukce bytů</h3><p>Úpravy bytů a koordinace navazujících prací.</p></article>
+      <article><div class="construction-mini-icon"><svg viewBox="0 0 64 64" aria-hidden="true"><path d="M7 47 31 17l26 12-24 29z"/><path d="m17 43 25 10M24 34l25 10M31 25l25 10"/><path d="m32 18 9 25"/></svg></div><h3>Rekonstrukce podlah</h3><p>Příprava, opravy a dokončení podlah.</p></article>
     </div>
   </div>
 </section>
@@ -186,7 +187,7 @@
 <footer class="site-footer">
   <div class="container footer-grid">
     <div class="footer-brand">
-      <img src="assets/logo.webp" alt="" width="72" height="54">
+      <img src="assets/logo-transparent.png" alt="" width="64" height="64" loading="lazy" decoding="async">
       <p><b>fast ride s.r.o.</b><br>Elektroinstalace a technická řešení</p>
     </div>
     <nav class="footer-links" aria-label="Navigace v zápatí">
