@@ -770,3 +770,401 @@ main,section,.container{min-width:0}
   .construction-icon-row h3{font-size:.88rem}
   .construction-icon-row p{font-size:.73rem}
 }
+
+
+/* FINAL POLISH — unified logo alignment and compact left-aligned NOVINKA block */
+
+/* Use exactly the same circular logo size in header and footer */
+.brand img,
+.footer-brand img{
+  width:64px;
+  height:64px;
+  object-fit:contain;
+  background:transparent;
+  flex:0 0 64px;
+}
+.brand,
+.footer-brand{
+  align-items:center;
+}
+.brand img{
+  margin:0;
+}
+
+/* Construction section follows the same left-aligned rhythm as "Naše služby" */
+.construction-news{
+  padding:34px 0 36px;
+  background:#f4f5f6;
+}
+.construction-news-heading{
+  max-width:none;
+  margin:0 0 18px;
+  text-align:left;
+}
+.construction-news-line{
+  display:block;
+  margin-bottom:8px;
+}
+.construction-news-heading .eyebrow{
+  color:var(--accent2);
+  margin:0;
+}
+.construction-news-heading .eyebrow:before{
+  background:var(--accent);
+}
+.construction-news-new{
+  display:flex;
+  align-items:baseline;
+  gap:0;
+  margin:0 0 7px;
+  color:var(--accent2);
+  font-size:1rem;
+}
+.construction-news-new .novinka-square{
+  margin-right:.48em;
+}
+.construction-news-new strong{
+  color:var(--accent2);
+  letter-spacing:.04em;
+}
+.construction-news-copy{
+  display:grid;
+  grid-template-columns:minmax(0,1.25fr) minmax(260px,.75fr);
+  gap:38px;
+  align-items:end;
+}
+.construction-news-copy h2{
+  margin:0;
+}
+.construction-news-copy p{
+  margin:0;
+  color:var(--muted);
+  max-width:520px;
+}
+
+/* Five compact cards, same rounded-card language as existing services */
+.construction-card-grid{
+  display:grid;
+  grid-template-columns:repeat(5,minmax(0,1fr));
+  gap:10px;
+  margin:0;
+}
+.construction-card{
+  min-width:0;
+  padding:15px 12px 14px;
+  border:1px solid var(--line);
+  border-radius:15px;
+  background:#fff;
+  text-align:left;
+  box-shadow:0 7px 20px rgba(0,0,0,.035);
+  transition:transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+}
+.construction-card:hover{
+  transform:translateY(-2px);
+  border-color:rgba(242,163,26,.65);
+  box-shadow:0 10px 24px rgba(0,0,0,.06);
+}
+.construction-mini-icon{
+  width:38px;
+  height:38px;
+  margin:0 0 8px;
+  color:var(--accent2);
+}
+.construction-mini-icon svg{
+  display:block;
+  width:100%;
+  height:100%;
+  fill:none;
+  stroke:currentColor;
+  stroke-width:3;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+}
+.construction-card h3{
+  margin:0 0 5px;
+  font-size:.92rem;
+}
+.construction-card p{
+  margin:0;
+  color:var(--muted);
+  font-size:.75rem;
+  line-height:1.4;
+}
+
+@media(max-width:1000px){
+  .construction-news-copy{
+    grid-template-columns:1fr;
+    gap:8px;
+    align-items:start;
+  }
+  .construction-news-copy p{
+    max-width:720px;
+  }
+  .construction-card-grid{
+    grid-template-columns:repeat(3,minmax(0,1fr));
+  }
+}
+
+@media(max-width:760px){
+  .brand img,
+  .footer-brand img{
+    width:58px;
+    height:58px;
+    flex-basis:58px;
+  }
+  .construction-news{
+    padding:28px 0 30px;
+  }
+  .construction-news-heading{
+    margin-bottom:15px;
+  }
+  .construction-card-grid{
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:9px;
+  }
+  .construction-card{
+    padding:13px 11px;
+  }
+}
+
+@media(max-width:430px){
+  .construction-card-grid{
+    grid-template-columns:1fr;
+  }
+}
+
+@media(prefers-reduced-motion:reduce){
+  .construction-card{
+    transition:none;
+  }
+  .construction-card:hover{
+    transform:none;
+  }
+}
+
+
+/* FINAL COMPACT ALIGNMENT */
+.construction-news{
+  padding:24px 0 26px !important;
+}
+.construction-news-heading.compact-balanced{
+  display:grid;
+  grid-template-columns:minmax(0,1.15fr) minmax(280px,.85fr);
+  gap:30px;
+  align-items:start;
+  margin:0 0 12px !important;
+  text-align:left !important;
+}
+.construction-news-left,
+.construction-news-right{
+  min-width:0;
+}
+.construction-news-left .eyebrow{
+  margin:0 0 6px !important;
+}
+.construction-news-left h2{
+  margin:0 !important;
+}
+.construction-news-right p{
+  margin:0 !important;
+  color:var(--muted);
+  align-self:start;
+}
+.construction-news-new,
+.construction-news-badge{
+  display:none !important;
+}
+
+.construction-card-grid{
+  display:grid;
+  grid-template-columns:repeat(5,minmax(0,1fr));
+  gap:8px !important;
+  margin:0 !important;
+}
+.construction-card{
+  padding:12px 11px !important;
+}
+.construction-card-row{
+  display:flex;
+  align-items:flex-start;
+  gap:9px;
+}
+.construction-mini-icon{
+  width:30px !important;
+  height:30px !important;
+  flex:0 0 30px;
+  margin:1px 0 0 !important;
+}
+.construction-card h3{
+  margin:0 0 3px !important;
+  font-size:.88rem !important;
+}
+.construction-card p{
+  margin:0 !important;
+  font-size:.72rem !important;
+  line-height:1.32 !important;
+}
+
+.contact-email-line{
+  display:grid;
+  grid-template-columns:110px minmax(0,1fr);
+  gap:18px;
+  align-items:center;
+}
+.contact-email-line span{
+  color:var(--accent2);
+  font-weight:800;
+}
+.contact-email-line a{
+  justify-self:start;
+}
+
+@media(max-width:1000px){
+  .construction-news-heading.compact-balanced{
+    grid-template-columns:1fr;
+    gap:6px;
+  }
+  .construction-card-grid{
+    grid-template-columns:repeat(3,minmax(0,1fr));
+  }
+}
+@media(max-width:760px){
+  .construction-news{
+    padding:20px 0 22px !important;
+  }
+  .construction-card-grid{
+    grid-template-columns:repeat(2,minmax(0,1fr));
+  }
+  .contact-email-line{
+    grid-template-columns:90px minmax(0,1fr);
+    gap:12px;
+  }
+}
+@media(max-width:460px){
+  .construction-card-grid{
+    grid-template-columns:1fr;
+  }
+  .contact-email-line{
+    grid-template-columns:1fr;
+    gap:3px;
+  }
+}
+
+
+/* FINAL UNIFIED VERSION */
+
+/* The right-hand explanations and phone buttons use exactly the process-block layout. */
+.section-phone-contact{
+  max-width:440px;
+  display:flex;
+  flex-direction:column;
+  align-items:flex-start;
+  gap:12px;
+}
+.section-phone-contact p{
+  margin:0;
+  color:var(--muted);
+}
+
+/* Construction block follows the exact font sizes and card structure of Naše služby. */
+.construction-news{
+  padding:48px 0 !important;
+}
+.construction-unified-heading{
+  margin-bottom:28px !important;
+}
+.construction-service-grid{
+  grid-template-columns:repeat(3,1fr) !important;
+  gap:14px !important;
+}
+.construction-service-card{
+  padding:22px !important;
+  text-align:left !important;
+}
+.construction-service-card .construction-service-icon{
+  display:grid;
+  place-items:center;
+  width:38px;
+  height:38px;
+  border-radius:10px;
+  background:rgba(242,163,26,.15);
+  color:#825000;
+  margin-bottom:14px;
+}
+.construction-service-icon svg{
+  width:25px;
+  height:25px;
+  fill:none;
+  stroke:currentColor;
+  stroke-width:3;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+}
+.construction-service-card h3{
+  font-size:1.08rem !important;
+  margin-bottom:8px !important;
+}
+.construction-service-card p{
+  color:var(--muted) !important;
+  font-size:.9rem !important;
+  line-height:1.52 !important;
+  margin:0 !important;
+}
+
+/* Remove all old compact/side-icon construction rules. */
+.construction-card-grid,
+.construction-card,
+.construction-card-row,
+.construction-mini-icon{
+  all:unset;
+}
+
+/* Contact labels: E-mail, Čas pro kontakt and Působnost are now one identical grid. */
+.contact-meta{
+  display:grid !important;
+  gap:7px !important;
+  margin-top:12px !important;
+}
+.contact-meta div{
+  display:grid !important;
+  grid-template-columns:145px minmax(0,1fr) !important;
+  gap:10px !important;
+  align-items:start !important;
+}
+.contact-meta b{
+  color:var(--accent2) !important;
+  font-size:.74rem !important;
+  font-weight:700 !important;
+  text-transform:uppercase !important;
+  letter-spacing:.07em !important;
+}
+.contact-meta span,
+.contact-meta a{
+  color:#c8cdd1 !important;
+  font-size:.84rem !important;
+  margin:0 !important;
+}
+
+/* Keep the lowercase letters in "Osobní kontakt". */
+.contact-primary-final > .eyebrow{
+  text-transform:none !important;
+}
+
+@media(max-width:1000px){
+  .construction-service-grid{
+    grid-template-columns:repeat(2,minmax(0,1fr)) !important;
+  }
+  .section-phone-contact{
+    max-width:none;
+  }
+}
+
+@media(max-width:620px){
+  .construction-service-grid{
+    grid-template-columns:1fr !important;
+  }
+  .contact-meta div{
+    grid-template-columns:1fr !important;
+    gap:2px !important;
+  }
+}
