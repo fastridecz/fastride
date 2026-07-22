@@ -1168,3 +1168,128 @@ main,section,.container{min-width:0}
     gap:2px !important;
   }
 }
+
+
+/* MOBILE HEADER — logo left, company and phone centered, orange Menu button */
+.mobile-header-center{
+  display:none;
+}
+
+@media(max-width:780px){
+  .header-inner{
+    height:88px !important;
+    display:grid !important;
+    grid-template-columns:64px minmax(0,1fr) auto;
+    align-items:center;
+    gap:12px !important;
+  }
+
+  .brand{
+    min-width:0 !important;
+    width:64px;
+    display:block !important;
+  }
+
+  .brand img{
+    width:64px !important;
+    height:64px !important;
+    object-fit:contain !important;
+  }
+
+  .brand > span{
+    display:none !important;
+  }
+
+  .mobile-header-center{
+    display:flex;
+    min-width:0;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    gap:2px;
+    text-align:center;
+    line-height:1.15;
+  }
+
+  .mobile-header-center strong{
+    display:block;
+    max-width:100%;
+    color:var(--ink);
+    font-size:.84rem;
+    font-weight:850;
+    white-space:nowrap;
+  }
+
+  .mobile-header-center a{
+    display:block;
+    max-width:100%;
+    color:var(--ink);
+    font-size:.9rem;
+    font-weight:900;
+    white-space:nowrap;
+  }
+
+  .menu-button{
+    display:block !important;
+    margin-left:0 !important;
+    min-width:92px;
+    min-height:54px;
+    padding:0 18px !important;
+    border:0 !important;
+    border-radius:14px !important;
+    background:var(--accent) !important;
+    color:#111 !important;
+    box-shadow:0 8px 20px rgba(242,163,26,.24);
+    font-weight:900 !important;
+  }
+
+  .main-nav{
+    top:88px !important;
+  }
+}
+
+@media(max-width:430px){
+  .header-inner{
+    grid-template-columns:58px minmax(0,1fr) auto;
+    gap:8px !important;
+  }
+
+  .brand{
+    width:58px;
+  }
+
+  .brand img{
+    width:58px !important;
+    height:58px !important;
+  }
+
+  .mobile-header-center strong{
+    font-size:.74rem;
+  }
+
+  .mobile-header-center a{
+    font-size:.78rem;
+  }
+
+  .menu-button{
+    min-width:78px;
+    min-height:50px;
+    padding:0 13px !important;
+    font-size:.96rem;
+  }
+}
+
+@media(max-width:350px){
+  .mobile-header-center strong{
+    font-size:.68rem;
+  }
+
+  .mobile-header-center a{
+    font-size:.72rem;
+  }
+
+  .menu-button{
+    min-width:70px;
+    padding:0 10px !important;
+  }
+}
