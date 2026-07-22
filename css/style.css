@@ -1170,27 +1170,31 @@ main,section,.container{min-width:0}
 }
 
 
-/* MOBILE HEADER — logo left, company and phone centered, orange Menu button */
+/* FINAL MOBILE HEADER */
 .mobile-header-center{
   display:none;
 }
 
 @media(max-width:780px){
   .header-inner{
-    height:88px !important;
+    min-height:88px !important;
+    height:auto !important;
     display:grid !important;
-    grid-template-columns:64px minmax(0,1fr) auto;
-    align-items:center;
-    gap:12px !important;
+    grid-template-columns:64px minmax(168px,1fr) 94px !important;
+    align-items:center !important;
+    column-gap:10px !important;
+    padding-top:8px !important;
+    padding-bottom:8px !important;
   }
 
   .brand{
-    min-width:0 !important;
-    width:64px;
+    width:64px !important;
+    min-width:64px !important;
     display:block !important;
   }
 
   .brand img{
+    display:block !important;
     width:64px !important;
     height:64px !important;
     object-fit:contain !important;
@@ -1201,45 +1205,54 @@ main,section,.container{min-width:0}
   }
 
   .mobile-header-center{
-    display:flex;
-    min-width:0;
-    flex-direction:column;
-    align-items:center;
-    justify-content:center;
-    gap:2px;
-    text-align:center;
-    line-height:1.15;
+    display:flex !important;
+    min-width:0 !important;
+    flex-direction:column !important;
+    align-items:center !important;
+    justify-content:center !important;
+    gap:3px !important;
+    text-align:center !important;
+    line-height:1.08 !important;
+  }
+
+  .mobile-header-center strong,
+  .mobile-header-center a{
+    display:block !important;
+    width:max-content !important;
+    max-width:none !important;
+    margin:0 !important;
+    padding:0 !important;
+    color:#111 !important;
+    white-space:nowrap !important;
+    overflow:visible !important;
+    text-overflow:clip !important;
   }
 
   .mobile-header-center strong{
-    display:block;
-    max-width:100%;
-    color:var(--ink);
-    font-size:.84rem;
-    font-weight:850;
-    white-space:nowrap;
+    font-size:.76rem !important;
+    font-weight:800 !important;
   }
 
   .mobile-header-center a{
-    display:block;
-    max-width:100%;
-    color:var(--ink);
-    font-size:.9rem;
-    font-weight:900;
-    white-space:nowrap;
+    font-size:.80rem !important;
+    font-weight:850 !important;
   }
 
   .menu-button{
-    display:block !important;
-    margin-left:0 !important;
-    min-width:92px;
-    min-height:54px;
-    padding:0 18px !important;
+    display:flex !important;
+    align-items:center !important;
+    justify-content:center !important;
+    width:94px !important;
+    min-width:94px !important;
+    height:54px !important;
+    margin:0 !important;
+    padding:0 14px !important;
     border:0 !important;
     border-radius:14px !important;
-    background:var(--accent) !important;
+    background:#f5a623 !important;
     color:#111 !important;
-    box-shadow:0 8px 20px rgba(242,163,26,.24);
+    box-shadow:0 8px 20px rgba(242,163,26,.25) !important;
+    font-size:1rem !important;
     font-weight:900 !important;
   }
 
@@ -1250,12 +1263,13 @@ main,section,.container{min-width:0}
 
 @media(max-width:430px){
   .header-inner{
-    grid-template-columns:58px minmax(0,1fr) auto;
-    gap:8px !important;
+    grid-template-columns:58px minmax(148px,1fr) 82px !important;
+    column-gap:7px !important;
   }
 
   .brand{
-    width:58px;
+    width:58px !important;
+    min-width:58px !important;
   }
 
   .brand img{
@@ -1264,32 +1278,48 @@ main,section,.container{min-width:0}
   }
 
   .mobile-header-center strong{
-    font-size:.74rem;
+    font-size:.69rem !important;
   }
 
   .mobile-header-center a{
-    font-size:.78rem;
+    font-size:.71rem !important;
   }
 
   .menu-button{
-    min-width:78px;
-    min-height:50px;
-    padding:0 13px !important;
-    font-size:.96rem;
+    width:82px !important;
+    min-width:82px !important;
+    height:50px !important;
+    padding:0 10px !important;
+    font-size:.92rem !important;
   }
 }
 
-@media(max-width:350px){
+@media(max-width:370px){
+  .header-inner{
+    grid-template-columns:54px minmax(132px,1fr) 74px !important;
+  }
+
+  .brand{
+    width:54px !important;
+    min-width:54px !important;
+  }
+
+  .brand img{
+    width:54px !important;
+    height:54px !important;
+  }
+
   .mobile-header-center strong{
-    font-size:.68rem;
+    font-size:.62rem !important;
   }
 
   .mobile-header-center a{
-    font-size:.72rem;
+    font-size:.64rem !important;
   }
 
   .menu-button{
-    min-width:70px;
-    padding:0 10px !important;
+    width:74px !important;
+    min-width:74px !important;
+    font-size:.85rem !important;
   }
 }
