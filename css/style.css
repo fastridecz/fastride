@@ -1370,3 +1370,296 @@ main,section,.container{min-width:0}
     padding:18px;
   }
 }
+
+.project-button{
+ display:inline-flex;align-items:center;justify-content:center;border:1px solid #d6dadd;
+ background:#f4f5f6;padding:9px 11px;border-radius:9px;font-weight:800;color:#24282c
+}
+.project-button:hover{background:var(--accent);border-color:var(--accent);color:#17120a}
+
+.back-link{display:inline-flex;margin-bottom:18px;color:#d7dce0;font-weight:800;font-size:.88rem}
+.realization-project{overflow:hidden}
+.realization-intro{display:grid;grid-template-columns:.82fr 1.18fr;gap:42px;align-items:start;margin-bottom:34px}
+.realization-place{display:block;color:#915a00;text-transform:uppercase;letter-spacing:.09em;font-size:.72rem;font-weight:900;margin-bottom:9px}
+.realization-intro p{color:var(--muted);margin-bottom:12px}
+.realization-scope{margin:0;padding-left:20px;color:var(--muted)}
+.gallery-heading{display:flex;justify-content:space-between;align-items:end;gap:24px;margin-bottom:18px}
+.gallery-heading>p{max-width:360px;color:var(--muted);font-size:.88rem;margin:0}
+.realization-slider-wrap{position:relative}
+.realization-slider{
+ display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;
+ scrollbar-width:none;padding:2px 2px 12px
+}
+.realization-slider::-webkit-scrollbar{display:none}
+.gallery-item{
+ flex:0 0 calc(50% - 7px);scroll-snap-align:start;border:0;padding:0;background:#e5e8ea;
+ border-radius:16px;overflow:hidden;cursor:zoom-in;box-shadow:0 8px 24px rgba(12,18,24,.08)
+}
+.gallery-item img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.slider-arrow{
+ position:absolute;z-index:4;top:50%;transform:translateY(-50%);width:44px;height:44px;border:0;
+ border-radius:50%;background:rgba(20,24,28,.86);color:#fff;font-size:2rem;line-height:1;cursor:pointer;
+ box-shadow:0 6px 20px rgba(0,0,0,.2)
+}
+.slider-prev{left:12px}.slider-next{right:12px}
+.photo-lightbox{
+ position:fixed;inset:0;z-index:200;background:rgba(10,12,14,.92);display:none;align-items:center;
+ justify-content:center;padding:70px 70px 34px
+}
+.photo-lightbox.open{display:flex}
+.photo-lightbox img{max-width:min(1180px,90vw);max-height:82vh;object-fit:contain;border-radius:10px}
+.lightbox-close,.lightbox-arrow{position:absolute;border:0;background:rgba(255,255,255,.12);color:#fff;cursor:pointer}
+.lightbox-close{right:24px;top:18px;width:44px;height:44px;border-radius:50%;font-size:1.8rem}
+.lightbox-arrow{top:50%;transform:translateY(-50%);width:48px;height:58px;border-radius:12px;font-size:2.2rem}
+.lightbox-prev{left:18px}.lightbox-next{right:18px}
+
+@media(min-width:781px){
+ /* Keep the desktop home hero compact enough for the first image/hero to fit a 13-inch display. */
+ body.home-page .hero-content,.hero-content{padding-top:26px;padding-bottom:18px}
+ .hero-lead{font-size:clamp(.96rem,1.35vw,1.1rem)}
+ .hero-new{white-space:nowrap;font-size:.94rem;margin-bottom:13px}
+ .hero-facts{margin-top:20px}
+}
+@media(max-width:780px){
+ .realization-intro{grid-template-columns:1fr;gap:10px}
+ .gallery-heading{align-items:flex-start;flex-direction:column;gap:4px}
+ .gallery-item{flex-basis:82%}
+ .photo-lightbox{padding:64px 14px 24px}
+ .lightbox-prev{left:8px}.lightbox-next{right:8px}
+}
+@media(max-width:520px){
+ .gallery-item{flex-basis:88%}
+ .slider-arrow{width:38px;height:38px}
+}
+
+
+/* ===== v3 refinements ===== */
+
+/* HOME: NOVINKA must remain visually important. Do not shrink it. */
+.hero-new-emphasis{
+  font-size:clamp(1.04rem,1.55vw,1.22rem) !important;
+  line-height:1.32;
+  margin-bottom:10px !important;
+  white-space:nowrap;
+}
+.hero-new-emphasis strong{
+  font-size:1.08em;
+  letter-spacing:.015em;
+}
+
+/* Desktop home stays compact, but typography is not reduced. */
+@media(min-width:781px){
+  .hero-content{padding-top:24px !important;padding-bottom:16px !important}
+  .hero-new-emphasis{font-size:clamp(1.04rem,1.55vw,1.22rem) !important}
+}
+
+/* REALIZACE: compact 4-card overview with equal-height cards and aligned CTAs. */
+.project-grid{
+  align-items:stretch;
+  gap:18px;
+}
+.project-card{
+  display:flex;
+  flex-direction:column;
+  height:100%;
+}
+.project-card > img{
+  width:100%;
+  height:168px !important;
+  aspect-ratio:auto !important;
+  object-fit:cover;
+}
+.project-card > div{
+  display:flex;
+  flex-direction:column;
+  flex:1;
+  padding-top:15px;
+}
+.project-card h2{
+  margin-bottom:8px;
+}
+.project-card p{
+  margin-bottom:13px;
+}
+.project-card .project-button,
+.project-card button{
+  margin-top:auto;
+  align-self:center;
+  min-width:190px;
+  text-align:center;
+}
+.project-button,
+.project-card button:not(:disabled){
+  background:var(--accent) !important;
+  border-color:var(--accent) !important;
+  color:#17120a !important;
+  font-weight:900;
+}
+.project-button:hover,
+.project-card button:not(:disabled):hover{
+  background:#1683d8 !important;
+  border-color:#1683d8 !important;
+  color:#fff !important;
+}
+.project-card button:disabled{
+  margin-top:auto;
+  align-self:center;
+  min-width:190px;
+}
+
+/* Make the full category overview fit better on a 13-inch notebook. */
+@media(min-width:900px){
+  .page-hero.compact-hero{
+    padding-top:30px !important;
+    padding-bottom:24px !important;
+  }
+  .section.compact{
+    padding-top:28px !important;
+    padding-bottom:30px !important;
+  }
+  .project-grid{
+    grid-template-columns:repeat(4,minmax(0,1fr)) !important;
+  }
+  .project-card > img{
+    height:154px !important;
+  }
+  .project-card > div{
+    padding:14px !important;
+  }
+  .project-card h2{
+    font-size:1.16rem !important;
+    line-height:1.15;
+  }
+  .project-card p{
+    font-size:.88rem;
+    line-height:1.38;
+  }
+}
+
+/* DETAIL PAGES: remove unnecessary vertical emptiness. */
+.realization-hero{
+  padding-top:28px !important;
+  padding-bottom:22px !important;
+}
+.realization-project{
+  padding-top:0 !important;
+}
+.realization-intro{
+  margin-bottom:18px !important;
+  gap:28px !important;
+}
+.gallery-heading{
+  margin-top:0 !important;
+  margin-bottom:12px !important;
+}
+.gallery-heading h2{
+  margin-bottom:0;
+}
+
+/* GALLERY: show full photos, never crop them. */
+.realization-slider{
+  align-items:center;
+  gap:12px;
+  padding-bottom:8px;
+}
+.gallery-item{
+  flex:0 0 auto !important;
+  height:300px;
+  width:auto !important;
+  background:#eef0f2;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.gallery-item img{
+  width:auto !important;
+  height:100% !important;
+  max-width:none !important;
+  aspect-ratio:auto !important;
+  object-fit:contain !important;
+  display:block;
+}
+/* Landscape images naturally become wider; portrait images stay narrower,
+   so several full photographs are visible at once on desktop. */
+@media(min-width:900px){
+  .gallery-item{height:285px}
+  .realization-slider-wrap{margin-top:2px}
+}
+@media(max-width:780px){
+  .gallery-item{
+    height:360px;
+    max-width:86vw;
+  }
+  .gallery-item img{
+    max-width:86vw !important;
+    height:auto !important;
+    max-height:360px !important;
+  }
+}
+@media(max-width:520px){
+  .gallery-item{
+    height:315px;
+    max-width:88vw;
+  }
+  .gallery-item img{
+    max-width:88vw !important;
+    max-height:315px !important;
+  }
+}
+
+
+/* ===== FINAL RADOSOVICKA BUILD ===== */
+.hero-new.hero-new-emphasis{font-size:clamp(1.18rem,1.7vw,1.48rem)!important;font-weight:800;white-space:nowrap;letter-spacing:-.012em}
+.hero-new.hero-new-emphasis strong{font-size:1.02em!important;color:#fff}
+.hero-new.hero-new-emphasis .novinka-square{width:.78em;height:.78em}
+@media(max-width:980px){.hero-new.hero-new-emphasis{white-space:normal;font-size:1.12rem!important}}
+.project-card-link{color:inherit;text-decoration:none;cursor:pointer;transition:transform .18s ease,box-shadow .18s ease,border-color .18s ease}
+.project-card-link:hover{transform:translateY(-3px);box-shadow:0 14px 35px rgba(20,25,30,.12);border-color:rgba(235,151,24,.65)}
+.project-card .project-button{display:inline-flex;justify-content:center;align-items:center;background:var(--accent)!important;border:1px solid var(--accent)!important;color:#17120a!important;padding:10px 14px;border-radius:9px;font-weight:900;margin-top:auto;align-self:center;min-width:190px}
+.project-card-link:hover .project-button{background:#1683d8!important;border-color:#1683d8!important;color:#fff!important}
+.project-button-muted{background:#eceff1!important;border-color:#d9dde0!important;color:#747b80!important}
+.project-card-disabled{cursor:default}
+.detail-topline{display:flex;align-items:center;gap:18px}
+.back-circle{width:52px;height:52px;border-radius:50%;background:var(--accent);color:#16120c!important;display:inline-flex;align-items:center;justify-content:center;font-size:1.75rem;font-weight:900;line-height:1;text-decoration:none;flex:0 0 auto;transition:.18s ease}
+.back-circle:hover{background:#1683d8;color:#fff!important;transform:translateX(-2px)}
+.project-feature{padding-top:28px!important;padding-bottom:26px!important}
+.project-feature-grid{display:grid;grid-template-columns:minmax(0,.92fr) minmax(420px,1.08fr);gap:42px;align-items:center}
+.project-feature-copy .realization-place{font-size:.78rem;margin-bottom:8px}
+.project-feature-copy h2{font-size:clamp(2.05rem,4vw,4.4rem);line-height:.96;letter-spacing:-.045em;color:var(--accent);margin:0 0 8px}
+.project-address{font-weight:800;color:#31373b;margin:0 0 20px;font-size:1.02rem}
+.project-feature-photo{border-radius:20px;overflow:hidden;box-shadow:0 18px 44px rgba(17,25,33,.17);background:#e7e9eb}
+.project-feature-photo img{width:100%;height:420px;object-fit:cover;display:block}
+.gallery-section{padding-top:20px!important}
+.realization-slider{scroll-snap-type:x proximity;overflow-x:auto;scroll-behavior:smooth}
+.gallery-item{scroll-snap-align:start;border-radius:14px;overflow:hidden;border:1px solid #dfe3e6;box-shadow:0 8px 20px rgba(21,28,35,.08);padding:0;cursor:zoom-in}
+.gallery-item img{background:#f0f2f3}
+@media(min-width:1200px){.gallery-item{height:330px}}
+@media(max-width:900px){.project-feature-grid{grid-template-columns:1fr;gap:22px}.project-feature-photo{order:-1}.project-feature-photo img{height:min(56vw,420px)}.back-circle{width:46px;height:46px;font-size:1.5rem}}
+@media(max-width:560px){.detail-topline{align-items:flex-start}.project-feature-copy h2{font-size:2.35rem}.project-feature-photo img{height:62vw}.project-card>img{height:145px!important}}
+
+
+/* ===== USER REFINEMENTS 2026-08-26 ===== */
+/* Home: keep NOVINKA large and orange; slightly reduce only the following announcement text. */
+.hero-new.hero-new-emphasis{font-size:clamp(1.08rem,1.52vw,1.34rem)!important;white-space:nowrap!important;letter-spacing:-.015em}
+.hero-new.hero-new-emphasis strong{font-size:1.12em!important;color:var(--accent)!important;margin-right:.28em}
+.hero-new.hero-new-emphasis .novinka-square{background:var(--accent)!important}
+@media(max-width:1180px) and (min-width:981px){.hero-new.hero-new-emphasis{font-size:clamp(1rem,1.34vw,1.17rem)!important}}
+@media(max-width:980px){.hero-new.hero-new-emphasis{white-space:normal!important;font-size:1.08rem!important}.hero-new.hero-new-emphasis strong{font-size:1.12em!important}}
+
+/* Detail pages: keep Radošovická 4 together on desktop and make the realization date more visible. */
+.project-feature-copy .realization-place{font-size:1rem!important;font-weight:900!important;letter-spacing:.035em;margin-bottom:7px!important}
+.project-feature-copy h2{font-size:clamp(1.95rem,3.25vw,3.75rem)!important;line-height:1!important;margin-bottom:7px!important}
+@media(min-width:901px){.project-feature-copy h2{white-space:nowrap}}
+@media(max-width:560px){.project-feature-copy h2{font-size:2.2rem!important;white-space:normal}}
+
+/* ===== CONSISTENT PAGE-HERO SPACING 2026-08-26 =====
+   Keep typography unchanged. Use the same top spacing on all dark page headers. */
+.page-hero,
+.page-hero.compact-hero,
+.page-hero.contact-hero{
+  padding-top:42px !important;
+}
+/* Realizace heading stays on one line on notebook/desktop without changing font size. */
+@media(min-width:900px){
+  .page-hero.compact-hero h1{white-space:nowrap;max-width:none;}
+}
