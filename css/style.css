@@ -1806,3 +1806,6 @@ main,section,.container{min-width:0}
     display:none;
   }
 }
+
+/* Oddělení firemních údajů a zápatí na stránce kontaktů. */
+.contact-page-footer{border-top:1px solid #394047}
