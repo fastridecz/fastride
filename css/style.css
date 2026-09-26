@@ -1663,3 +1663,146 @@ main,section,.container{min-width:0}
 @media(min-width:900px){
   .page-hero.compact-hero h1{white-space:nowrap;max-width:none;}
 }
+
+/* ===== REALIZACE — TWO-BLOCK PORTFOLIO 2026-09-25 ===== */
+.portfolio-hero{
+  background:#081018;
+  color:#fff;
+  position:relative;
+  overflow:hidden;
+  border-bottom:1px solid rgba(255,255,255,.08);
+}
+.portfolio-hero::before{
+  content:"";
+  position:absolute;inset:0;
+  background:
+    radial-gradient(circle at 72% 34%,rgba(52,93,120,.14),transparent 33%),
+    linear-gradient(115deg,rgba(255,255,255,.02),transparent 35%);
+  pointer-events:none;
+}
+.portfolio-hero-grid{position:relative;display:grid;grid-template-columns:minmax(0,1.05fr) minmax(430px,.95fr);gap:38px;align-items:center;min-height:310px;padding-top:34px;padding-bottom:32px}
+.portfolio-hero-copy{position:relative;z-index:2}
+.portfolio-hero .eyebrow{color:var(--accent);font-weight:900;letter-spacing:.14em}
+.portfolio-hero .eyebrow::before{content:"";display:inline-block;width:34px;height:2px;background:var(--accent);vertical-align:middle;margin-right:12px}
+.portfolio-hero h1{color:#fff;margin:8px 0 12px;font-size:clamp(2.25rem,4.4vw,4.65rem);line-height:.98;letter-spacing:-.045em;max-width:760px}
+.portfolio-hero-copy>p{max-width:660px;color:#dce4e9;font-size:1rem;line-height:1.55;margin:0}
+.portfolio-project-tabs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:22px;max-width:620px}
+.portfolio-project-tab{border:1px solid #66747e;border-radius:7px;padding:11px 14px;background:rgba(9,16,23,.7);display:flex;flex-direction:column;gap:3px}
+.portfolio-project-tab small{font-weight:900;letter-spacing:.09em;color:#b9c4cb}.portfolio-project-tab.active small{color:var(--accent)}
+.portfolio-project-tab strong{font-size:1.02rem}.portfolio-project-tab span{font-size:.77rem;color:#cbd4da}
+.portfolio-blueprint{height:278px;position:relative;z-index:1;display:flex;align-items:center;justify-content:center}
+.portfolio-blueprint>img{position:absolute;top:24px;left:0;width:83%;height:calc(100% - 4px);object-fit:contain;object-position:left bottom;opacity:.95}
+.portfolio-blueprint ul{list-style:none;margin:0 0 65px auto;padding:0;position:relative;z-index:2;font-size:.68rem;letter-spacing:.045em;color:#d7e0e6;display:grid;gap:14px;min-width:145px;transform:translateX(7px)}
+.portfolio-blueprint li{padding-left:20px;position:relative}.portfolio-blueprint li::before{content:"";position:absolute;left:0;top:50%;width:11px;height:1px;background:#91a2ae}
+.portfolio-blueprint>b{position:absolute;left:8%;top:-8px;display:inline-flex;align-items:center;gap:12px;color:var(--accent);font-size:.72rem;letter-spacing:.14em;white-space:nowrap}.portfolio-blueprint>b::before{content:"";display:block;width:34px;height:2px;background:var(--accent)}
+.portfolio-back{display:inline-flex;color:#d7e0e6!important;text-decoration:none;font-weight:800;font-size:.82rem;margin-bottom:14px}.portfolio-back:hover{color:var(--accent)!important}
+.portfolio-detail-hero .portfolio-hero-grid{min-height:275px}.portfolio-detail-hero h1{font-size:clamp(2rem,3.65vw,3.9rem);line-height:1.02}.portfolio-detail-hero .portfolio-project-tabs{display:none}
+.project-grid-two{grid-template-columns:repeat(2,minmax(0,1fr))!important;max-width:1060px;margin:0 auto;gap:24px!important}
+.project-grid-two .project-card>img{height:245px!important}
+.project-grid-two .project-card>div{padding:22px!important}
+.project-grid-two .project-card h2{font-size:1.42rem!important;line-height:1.16!important;min-height:3.25em}
+.project-grid-two .project-card p{font-size:.94rem!important;line-height:1.5!important;min-height:4.5em}
+@media(max-width:900px){
+ .portfolio-hero-grid{grid-template-columns:1fr;gap:4px;min-height:0;padding-top:30px;padding-bottom:25px}
+ .portfolio-blueprint{height:190px;margin-top:8px;opacity:.85}
+ .portfolio-blueprint>img{width:100%}
+ .portfolio-blueprint ul{display:none}
+ .portfolio-blueprint>b{font-size:.63rem}
+ .portfolio-project-tabs{max-width:none}
+ .project-grid-two{grid-template-columns:1fr!important;max-width:640px}
+ .project-grid-two .project-card h2,.project-grid-two .project-card p{min-height:0}
+ .project-grid-two .project-card>img{height:230px!important}
+}
+@media(max-width:560px){
+ .portfolio-hero h1{font-size:2.35rem}
+ .portfolio-project-tabs{grid-template-columns:1fr}
+ .portfolio-blueprint{height:150px}
+ .project-grid-two .project-card>img{height:190px!important}
+}
+
+/* About page: approved replacement images are landscape photographs. */
+.about-photo-electrician,
+.about-photo-finishing{
+  width:min(100%, 560px) !important;
+  aspect-ratio:4 / 2.6 !important;
+}
+.about-photo-electrician img,
+.about-photo-finishing img{
+  width:100%;
+  height:100% !important;
+  object-fit:cover;
+  object-position:center;
+}
+
+/* realizace-lightbox-v2 */
+
+.project-photo img{cursor:zoom-in}
+.photo-lightbox{
+ position:fixed;inset:0;z-index:200;background:rgba(245,247,250,.28);backdrop-filter:blur(12px) saturate(.95);
+ -webkit-backdrop-filter:blur(12px) saturate(.95);display:none;align-items:center;justify-content:center;
+ padding:70px 70px 34px
+}
+.photo-lightbox.open{display:flex}
+.photo-lightbox img{max-width:min(1240px,92vw);max-height:84vh;object-fit:contain;border-radius:12px;box-shadow:0 18px 48px rgba(0,0,0,.18);background:#fff}
+.lightbox-close,.lightbox-arrow{position:absolute;border:0;background:rgba(20,24,28,.12);color:#111;cursor:pointer;backdrop-filter:blur(4px)}
+.lightbox-close{right:24px;top:18px;width:44px;height:44px;border-radius:50%;font-size:1.8rem;line-height:1}
+.lightbox-arrow{top:50%;transform:translateY(-50%);width:48px;height:58px;border-radius:12px;font-size:2.2rem;line-height:1}
+.lightbox-prev{left:18px}.lightbox-next{right:18px}
+@media(max-width:780px){.photo-lightbox{padding:64px 14px 24px}.lightbox-prev{left:8px}.lightbox-next{right:8px}}
+
+/* Gallery mark: fixed screen dimensions on every opened photo. */
+.photo-lightbox .lightbox-photo{position:relative;display:block;flex:none;max-width:min(1240px,92vw);max-height:84vh;line-height:0}
+.photo-lightbox .lightbox-photo > img{display:block;width:100%;height:100%;max-width:none;max-height:none;object-fit:contain;border-radius:12px}
+.photo-lightbox .lightbox-brand{box-sizing:border-box;position:absolute;left:50%;bottom:20px;transform:translateX(-50%);width:max-content;height:68px;display:flex;align-items:center;justify-content:center;gap:12px;color:#fff;font:700 24px/1 Arial,Helvetica,sans-serif;letter-spacing:.25px;white-space:nowrap;text-shadow:0 1px 3px rgba(0,0,0,.48)}
+.photo-lightbox .lightbox-brand > span:last-child{color:rgba(255,255,255,.8)}
+.photo-lightbox .lightbox-brand-emblem{position:relative;display:block;flex:none;width:45px;height:45px;overflow:hidden;border-radius:50%;box-shadow:0 1px 4px rgba(0,0,0,.4)}
+.photo-lightbox .lightbox-brand-emblem img{position:absolute;left:-8px;top:-8px;display:block;width:61px;height:61px;max-width:none;max-height:none;border-radius:0;object-fit:cover;box-shadow:none}
+@media(max-width:520px){.photo-lightbox .lightbox-brand{bottom:10px;height:48px;gap:7px;font-size:16px}.photo-lightbox .lightbox-brand-emblem{width:32px;height:32px}.photo-lightbox .lightbox-brand-emblem img{left:-6px;top:-6px;width:44px;height:44px}}
+
+
+/* Technical decorative hero drawings for About + Contact */
+.page-hero{
+  position:relative;
+  overflow:hidden;
+  isolation:isolate;
+}
+.page-hero > .container{
+  position:relative;
+  z-index:2;
+}
+.about-hero::after,
+.contact-hero::after{
+  content:"";
+  position:absolute;
+  bottom:0;
+  pointer-events:none;
+  background-repeat:no-repeat;
+  background-size:contain;
+  z-index:1;
+}
+.about-hero::after{
+  right:0;
+  width:min(57%, 760px);
+  height:min(78%, 270px);
+  background-image:url("../assets/hero-cables.svg");
+  background-position:right bottom;
+  opacity:.46;
+}
+.contact-hero::after{
+  left:max(22px, calc((100% - 1180px)/2));
+  width:min(47%, 640px);
+  height:180px;
+  background-image:url("../assets/hero-contact-tech.svg");
+  background-position:left bottom;
+  opacity:.28;
+}
+@media(max-width:900px){
+  .about-hero::after{width:48%;opacity:.28}
+  .contact-hero::after{width:45%;opacity:.17}
+}
+@media(max-width:780px){
+  .about-hero::after,
+  .contact-hero::after{
+    display:none;
+  }
+}
