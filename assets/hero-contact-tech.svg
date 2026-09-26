@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 180" fill="none" aria-hidden="true">
+  <g stroke="#d3dee5" stroke-width="1.2" stroke-linecap="square" stroke-linejoin="miter">
+    <path d="M15 142h94l24-24h125l25-25h112l26 26h98l26-26h136M15 150h98l24-24h125l25-25h104l26 26h98l26-26h128M15 158h102l24-24h125l25-25h96l26 26h98l26-26h120"/>
+    <path d="M65 122V61h78v57M92 61V37h25v24M251 116V45h76v48M289 45V29h25v16M477 118V47h88v46M509 47V31h24v16"/>
+    <path d="M59 61h90M245 45h88M471 47h100" stroke-width=".7"/>
+    <circle cx="104" cy="61" r="7"/><circle cx="289" cy="45" r="7"/><circle cx="521" cy="47" r="7"/>
+    <path d="M99 61h10M104 56v10M284 45h10M289 40v10M516 47h10M521 42v10" stroke-width=".8"/>
+    <path d="M133 118v25M283 93v24M401 119v24M525 93v24"/>
+    <path d="M25 169h607M25 165v8M632 165v8M205 165v8M422 165v8M25 169l7-4M205 169l7-4M422 169l7-4M632 169l7-4" stroke-width=".65"/>
+    <path d="M160 21h58M160 25h58M160 29h58M193 29v68M355 21h50M355 25h50M355 29h50M380 29v64M605 26h51M605 30h51M605 34h51M630 34v59" stroke-width=".7" stroke-dasharray="5 4"/>
+  </g>
+  <g fill="#d3dee5" font-family="Arial,sans-serif" font-size="9" letter-spacing="1.2" opacity=".72">
+    <text x="72" y="52">J1</text><text x="256" y="36">J2</text><text x="487" y="38">J3</text><text x="267" y="178">L  ·  N  ·  PE</text>
+  </g>
+</svg>

@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 300" fill="none" aria-hidden="true">
+  <g stroke="#d3dee5" stroke-width="1.7" stroke-linecap="square" stroke-linejoin="miter">
+    <path d="M590 63h141v112H590zM599 73h123v92H599z"/>
+    <path d="M622 80v78M652 80v78M682 80v78M712 80v78" stroke-width="1"/>
+    <path d="M609 102h21M639 102h21M669 102h21M699 102h21M609 134h21M639 134h21M669 134h21M699 134h21"/>
+    <path d="M604 175v27h-94l-56 56H96v42M614 175v33h-98l-56 56H160v36M624 175v39h-102l-56 56H224v30"/>
+    <path d="M634 175v45H528l-56 56H288v24M644 175v51H534l-56 56H352v18M654 175v57H540l-56 56H416v12"/>
+    <path d="M664 175v63H546l-56 56H480v6M674 175v69H552l-56 56M683 175v75h-84l-50 50M692 175v81h-51l-44 44M701 175v87h-18l-38 38M710 175v93l-32 32"/>
+    <path d="M96 290H62M160 290h-34M224 290h-34M288 290h-34M352 290h-34M416 290h-34" stroke-width="1"/>
+    <circle cx="604" cy="175" r="2.8"/><circle cx="624" cy="175" r="2.8"/><circle cx="644" cy="175" r="2.8"/><circle cx="664" cy="175" r="2.8"/><circle cx="683" cy="175" r="2.8"/><circle cx="701" cy="175" r="2.8"/>
+    <path d="M563 63h-17v112h17M746 63h17v112h-17M552 53l-12 12M769 53l-12 12M552 185l-12-12M769 185l-12-12" stroke-width=".8"/>
+  </g>
+  <g fill="#d3dee5" font-family="Arial,sans-serif" font-size="10" letter-spacing="1.1" opacity=".7">
+    <text x="600" y="54">ROZVÁDĚČ</text><text x="690" y="296">L / N / PE</text>
+  </g>
+</svg>

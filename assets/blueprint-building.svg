@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 520" fill="none" aria-hidden="true">
+  <!-- Coherent axonometric cutaway of a single room; all faces share the same four plan corners. -->
+  <g stroke="#637b8c" stroke-width="1" opacity=".36" stroke-dasharray="5 6">
+    <path d="M56 341L92 352M444 462l34 11M737 293l30-17M385 183l-20-19"/>
+    <path d="M92 184v-28M385 15V2M737 125V98M444 294v-27"/>
+    <path d="M92 352l-32 18M444 462l-32 18M737 293l32 19"/>
+  </g>
+
+  <!-- Foundation / floor slab and its thickness. -->
+  <path d="M92 352L444 462 737 293 385 183Z" fill="#29455a" fill-opacity=".19" stroke="#a7bdc9" stroke-width="1.8"/>
+  <path d="M92 352v13l352 110 293-169v-13M444 462v13M92 365l352 110 293-169" fill="#172c3a" fill-opacity=".3" stroke="#839aaa" stroke-width="1.25"/>
+
+  <!-- Floor grid follows the two true axes of the room. -->
+  <g stroke="#77909e" stroke-width=".8" opacity=".36">
+    <path d="M180 380l293-169M268 407l293-169M356 435l293-169"/>
+    <path d="M165 310l352 110M238 267l352 110M312 225l352 110"/>
+  </g>
+
+  <!-- Two full-height walls around the rear; cut walls are kept low to reveal the interior. -->
+  <path d="M92 184L385 15v168L92 352Z" fill="#264052" fill-opacity=".21" stroke="#a8bbc5" stroke-width="1.65"/>
+  <path d="M385 15L737 125v168L385 183Z" fill="#345368" fill-opacity=".18" stroke="#a8bbc5" stroke-width="1.65"/>
+  <path d="M92 306L444 416v46L92 352Z" fill="#304b5e" fill-opacity=".42" stroke="#9db4c1" stroke-width="1.5"/>
+  <path d="M444 416L737 247v46L444 462Z" fill="#294455" fill-opacity=".38" stroke="#9db4c1" stroke-width="1.5"/>
+  <path d="M92 306l352 110 293-169M92 184L385 15 737 125" stroke="#bbcad2" stroke-width="1.6" opacity=".8"/>
+  <path d="M92 184L444 294 737 125M444 294v122" stroke="#8199a8" stroke-width="1" stroke-dasharray="6 6" opacity=".48"/>
+
+  <!-- Door opening cut into the left wall, with a lintel and jamb. -->
+  <path d="M180 195l64-37v106l-64 37Z" fill="#081018" fill-opacity=".78" stroke="#bdccd4" stroke-width="1.65"/>
+  <path d="M186 198l52-30v89l-52 30Z" stroke="#8ca5b3" stroke-width="1"/>
+  <circle cx="224" cy="231" r="2" fill="#d7a93e"/>
+
+  <!-- Two glazed openings are mapped to the actual plane of the back wall. -->
+  <path d="M441 85l85 26v66l-85-26Z" fill="#0c202d" fill-opacity=".72" stroke="#bfced5" stroke-width="1.55"/>
+  <path d="M589 131l85 26v66l-85-26Z" fill="#0c202d" fill-opacity=".72" stroke="#bfced5" stroke-width="1.55"/>
+  <g stroke="#8faab8" stroke-width=".9">
+    <path d="M448 94l71 22v52l-71-22ZM596 140l71 22v52l-71-22Z"/>
+    <path d="M483 106v52M631 152v52M441 118l85 26M589 164l85 26"/>
+    <path d="M438 154l91 28M586 200l91 28"/>
+  </g>
+
+  <!-- Wall thicknesses at the connected outer corners. -->
+  <g stroke="#96adba" stroke-width="1" opacity=".68">
+    <path d="M92 184l9 4L394 19l-9-4M385 15l-9 8 352 110 9-8"/>
+    <path d="M92 306l9 3 352 110-9-3M444 416l-8-3 293-169 8 3"/>
+  </g>
+
+  <!-- Drafting axes and dimension witness lines, without fictional measurements. -->
+  <g stroke="#7f98a8" stroke-width=".85" opacity=".55">
+    <path d="M75 387l352 110M75 378v17M427 488v17M69 390l12-6M421 500l12-6"/>
+    <path d="M761 120v168M753 120h16M753 288h16M756 123l10-6M756 291l10-6"/>
+    <path d="M69 172l293-169M69 164v16M362 3v10"/>
+  </g>
+  <g fill="#9db3bf" font-family="Arial,sans-serif" font-size="10" letter-spacing="1.3" opacity=".7">
+    <text x="232" y="463">AXONOMETRIE · KONCEPT</text>
+    <text x="776" y="210" transform="rotate(90 776 210)">ŘEZ 01</text>
+  </g>
+</svg>
