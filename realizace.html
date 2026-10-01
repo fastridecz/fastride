@@ -35,6 +35,14 @@
     .grid-four .project-photo img{height:265px}
     .project-photo figcaption{padding:7px 2px 0;color:#535d66;font-size:.95rem;line-height:1.35;min-height:44px}
     .final-project-photo img{outline:2px solid rgba(239,169,0,.75);outline-offset:2px}
+    .portfolio-project-tab{appearance:none;width:100%;font:inherit;color:inherit;text-align:left;cursor:pointer}
+    .portfolio-project-tab:hover,.portfolio-project-tab:focus-visible{border-color:var(--accent);outline:none}
+    .project-panel[hidden]{display:none}
+    .znojmo-stage{padding-top:2px}
+    .znojmo-photo-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px;align-items:start}
+    .znojmo-photo-grid .project-photo img{width:100%;height:310px;object-fit:contain;background:#eef1f3}
+    .znojmo-photo-grid .project-photo figcaption{min-height:0;font-weight:600}
+    .photo-lightbox.brand-baked .lightbox-brand{display:none}
     @media (max-width:1100px){
       .grid-seven{grid-template-columns:repeat(4,minmax(0,1fr))}
       .grid-four{grid-template-columns:repeat(4,minmax(0,1fr))}
@@ -47,6 +55,8 @@
       .work-block-head h3{font-size:1.45rem}
       .grid-seven,.grid-four{grid-template-columns:repeat(3,minmax(0,1fr))}
       .grid-two{grid-template-columns:repeat(2,minmax(0,1fr))}
+      .znojmo-photo-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+      .znojmo-photo-grid .project-photo img{height:400px}
       .project-photo img,.grid-seven .project-photo img,.grid-four .project-photo img{height:205px}
       .grid-two .project-photo img{height:240px}
     }
@@ -59,6 +69,8 @@
       .grid-seven,.grid-four,.grid-two{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
       .project-photo img,.grid-seven .project-photo img,.grid-four .project-photo img,.grid-two .project-photo img{height:175px;border-radius:12px}
       .project-photo figcaption{font-size:.84rem;min-height:34px;padding-top:6px}
+      .znojmo-photo-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+      .znojmo-photo-grid .project-photo img{height:250px}
     }
   </style>
 </head>
@@ -71,10 +83,11 @@
   <nav id="main-nav" class="main-nav" aria-label="Hlavní navigace"><a href="index.html">Domů</a><a href="o-spolecnosti.html">O společnosti</a><a href="realizace.html" aria-current="page">Realizace</a><a href="kontakty.html">Kontakty</a></nav>
 </div></header>
 <main id="content">
-<section class="portfolio-hero"><div class="container portfolio-hero-grid"><div class="portfolio-hero-copy"><span class="eyebrow">Naše realizace</span><h1>Vybrané projekty a ukázky naší práce</h1><p>Ukázky dokončených a průběžných prací – od elektroinstalací a rozvaděčů po kompletní rekonstrukce.</p><div class="portfolio-project-tabs"><div class="portfolio-project-tab active"><small>PRAHA 10</small><strong>Radošovická</strong><span>01.01.2026 – 31.07.2026</span></div><div class="portfolio-project-tab"><small>ZNOJMO</small><strong>Rekonstrukce objektu</strong><span>Práce probíhají</span></div></div></div><div class="portfolio-blueprint" aria-hidden="true"><img src="assets/blueprint-building.svg" alt=""><ul><li>KOMPLETNÍ ŘEŠENÍ</li><li>KVALITA</li><li>ZKUŠENOSTI</li><li>SPOLEHLIVOST</li></ul><b>OD NÁVRHU K REALIZACI</b></div></div></section>
+<section class="portfolio-hero"><div class="container portfolio-hero-grid"><div class="portfolio-hero-copy"><span class="eyebrow">Naše realizace</span><h1>Vybrané projekty a ukázky naší práce</h1><p>Ukázky dokončených a průběžných prací – od elektroinstalací a rozvaděčů po kompletní rekonstrukce.</p><div class="portfolio-project-tabs" role="tablist" aria-label="Výběr projektu"><button class="portfolio-project-tab" type="button" role="tab" aria-selected="false" aria-controls="project-praha" data-project-tab="praha"><small>PRAHA 10</small><strong>Radošovická</strong><span>01.01.2026 – 31.07.2026</span></button><button class="portfolio-project-tab active" type="button" role="tab" aria-selected="true" aria-controls="project-znojmo" data-project-tab="znojmo"><small>ZNOJMO</small><strong>Mariánské náměstí</strong><span>Práce probíhají</span></button></div></div><div class="portfolio-blueprint" aria-hidden="true"><img src="assets/blueprint-building.svg" alt=""><ul><li>KOMPLETNÍ ŘEŠENÍ</li><li>KVALITA</li><li>ZKUŠENOSTI</li><li>SPOLEHLIVOST</li></ul><b>OD NÁVRHU K REALIZACI</b></div></div></section>
 
 <section class="realizace-body">
   <div class="container">
+    <section class="project-panel" id="project-praha" data-project-panel="praha" role="tabpanel" hidden>
     <div class="project-intro-clean">
       <div>
         <span class="eyebrow dark">Praha 10 · Radošovická</span>
@@ -143,6 +156,31 @@
         </div>
       </section>
     </div>
+    </section>
+
+    <section class="project-panel" id="project-znojmo" data-project-panel="znojmo" role="tabpanel">
+      <div class="project-intro-clean">
+        <div>
+          <span class="eyebrow dark">Znojmo · Mariánské náměstí</span>
+          <h2>Přeměna kanceláří na byty</h2>
+        </div>
+        <p>Stavební úpravy městského domu na Mariánském náměstí ve Znojmě – přeměna kanceláří na byty.</p>
+      </div>
+
+      <section class="work-block znojmo-stage">
+        <div class="work-block-head">
+          <span>01</span>
+          <div><h3>Počáteční fáze rekonstrukce</h3><p>Výchozí stav a první přípravné práce před hlavními rekonstrukčními zásahy.</p></div>
+        </div>
+        <div class="znojmo-photo-grid" aria-label="Počáteční fáze rekonstrukce objektu ve Znojmě">
+          <figure class="project-photo"><img src="assets/realizace/znojmo/01-kovove-pricky-u-oken.webp" alt="Montáž kovových příček u oken – průběh prací" loading="eager" decoding="async" data-brand-baked="true"><figcaption>Montáž kovových příček u oken – průběh prací</figcaption></figure>
+          <figure class="project-photo"><img src="assets/realizace/znojmo/02-detail-profilu.webp" alt="Konstrukce příček – detail kovových profilů" loading="eager" decoding="async" data-brand-baked="true"><figcaption>Konstrukce příček – detail kovových profilů</figcaption></figure>
+          <figure class="project-photo"><img src="assets/realizace/znojmo/03-priprava-dispozice.webp" alt="Příprava nové dispozice bytových jednotek" loading="eager" decoding="async" data-brand-baked="true"><figcaption>Příprava nové dispozice bytových jednotek</figcaption></figure>
+          <figure class="project-photo"><img src="assets/realizace/znojmo/04-konstrukce-pricek.webp" alt="Kovová konstrukce příček – průběh realizace" loading="lazy" decoding="async" data-brand-baked="true"><figcaption>Kovová konstrukce příček – průběh realizace</figcaption></figure>
+          <figure class="project-photo"><img src="assets/realizace/znojmo/05-priprava-sten.webp" alt="Příprava stěn pro další stavební úpravy" loading="lazy" decoding="async" data-brand-baked="true"><figcaption>Příprava stěn pro další stavební úpravy</figcaption></figure>
+        </div>
+      </section>
+    </section>
   </div>
 </section>
 
