@@ -13,6 +13,22 @@ if (button && nav) {
 }
 document.querySelectorAll('[data-year]').forEach(el => el.textContent = new Date().getFullYear());
 
+(function(){
+  var tabs=Array.from(document.querySelectorAll('[data-project-tab]'));
+  var panels=Array.from(document.querySelectorAll('[data-project-panel]'));
+  if(!tabs.length || !panels.length) return;
+  function activate(name){
+    tabs.forEach(function(tab){
+      var selected=tab.dataset.projectTab===name;
+      tab.classList.toggle('active',selected);
+      tab.setAttribute('aria-selected',String(selected));
+    });
+    panels.forEach(function(panel){panel.hidden=panel.dataset.projectPanel!==name;});
+  }
+  tabs.forEach(function(tab){tab.addEventListener('click',function(){activate(tab.dataset.projectTab);});});
+  activate('znojmo');
+})();
+
 document.querySelectorAll('.realization-slider-wrap').forEach(function(wrap){
   var slider=wrap.querySelector('.realization-slider');
   var prev=wrap.querySelector('.slider-prev'), next=wrap.querySelector('.slider-next');
@@ -72,6 +88,7 @@ document.querySelectorAll('.realization-slider-wrap').forEach(function(wrap){
     current=(i+items.length)%items.length;
     img.src=items[current].getAttribute('data-full') || items[current].currentSrc || items[current].src;
     img.alt=items[current].alt || 'Zvětšená fotografie';
+    box.classList.toggle('brand-baked',items[current].dataset.brandBaked==='true');
     if(img.complete) fitPhoto();
     box.classList.add('open');
     box.setAttribute('aria-hidden','false');
